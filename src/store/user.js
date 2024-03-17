@@ -36,7 +36,7 @@ class user {
 
     async getUsers(){
         try{
-            const res = await axios.get('http://localhost:3000');
+            const res = await axios.get('http://127.0.0.1:3000');
             return res.data;
         }
         catch(e){
@@ -46,7 +46,7 @@ class user {
     
     async searchUsers(data){
         try{
-            const res = await axios.get(`http://localhost:3000?term=${data}`);
+            const res = await axios.get(`http://127.0.0.1:3000?term=${data}`);
             this.setUsers(res.data);
         }
         catch(e){
